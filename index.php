@@ -7,8 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+
     <?php 
-        
+       include __DIR__ . "/partial/database.php";
+       
+       foreach ($dischi as $chiaveDisco => $disco) {
+            echo($disco["titolo"]);
+            echo($disco["autore"]);
+            echo($disco["anno"]);
+            echo($disco["genere"]);
+            echo($disco["copertina"]);
+
+       } 
     ?>
     
 </body>

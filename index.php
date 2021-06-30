@@ -14,29 +14,38 @@
     
 </head>
 <body>
-    <ul id="cards">
-        <?php 
-        include __DIR__ . "/partial/database.php";
-        
-        foreach ($dischi as $chiaveDisco => $disco) {
+    <header>
+        <h1 class="titolo-pagina">Album del mese</h1>
+    </header>
+    <main>
 
-        ?>
-        <!-- card disco -->
-        <li class="card">
+        <ul id="cards">        
             <?php 
-                    echo("<img class='immagine-disco' src='" . $disco["copertina"]. "' />");
+                include __DIR__ . "/partial/database.php";
+            
+                foreach ($dischi as $chiaveDisco => $disco) {
 
-                    echo("<h2>".$disco["titolo"]."</h2>");
-                    echo("<h3>".$disco["autore"]."</h3>");
-                    echo("<h4>".$disco["anno"]."</h4>");
-                    echo("<h5>".$disco["genere"]."</h5>");
             ?>
-        </li>
-        <!-- /card disco -->
-        <?php 
-        } 
-        ?>
-    </ul>
+            <!-- card disco -->
+            <li class="card">
+                <?php 
+                        echo("<img class='immagine-disco' src='" . $disco["copertina"]. "' />");
+
+                        echo("<h2>".$disco["titolo"]."</h2>");
+                        echo("<h3>".$disco["autore"]."</h3>");
+                        echo("<h4>".$disco["anno"]."</h4>");
+                        echo("<h5>".$disco["genere"]."</h5>");
+                ?>
+            </li>
+            <!-- /card disco -->
+            <?php 
+            } 
+            ?>
+        </ul>
+    </main>
+    <footer>
+        
+    </footer>
     
     
 </body>

@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#cards{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    list-style: none;
+    padding: 15px;
+    margin:5px;
+}
+
+.immagine-disco{
+    width: 150px;
+}
